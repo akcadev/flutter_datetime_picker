@@ -98,16 +98,17 @@ class HomePage extends StatelessWidget {
                       minTime: DateTime(2018, 3, 5),
                       maxTime: DateTime(2019, 6, 7),
                       theme: DatePickerTheme(
-                          headerColor: Colors.orange,
-                          backgroundColor: Colors.blue,
+                          headerColor: Color(0XFFDF1228),
+                          backgroundColor: Colors.white,
+                          titleText: "Randevu Tarihini Seçiniz",
                           itemStyle: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
+                              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
                           doneStyle: TextStyle(color: Colors.white, fontSize: 16)),
                       onChanged: (date) {
                     print('change $date in time zone ' + date.timeZoneOffset.inHours.toString());
                   }, onConfirm: (date) {
                     print('confirm $date');
-                  }, currentTime: DateTime.now(), locale: LocaleType.en);
+                  }, currentTime: DateTime.now(), locale: LocaleType.tr);
                 },
                 child: Text(
                   'show date picker(custom theme &date time range)',
@@ -115,7 +116,13 @@ class HomePage extends StatelessWidget {
                 )),
             FlatButton(
                 onPressed: () {
-                  DatePicker.showTimePicker(context, showTitleActions: true, onChanged: (date) {
+                  DatePicker.showTimePicker(context, showTitleActions: true, theme: DatePickerTheme(
+                          headerColor: Color(0XFFDF1228),
+                          backgroundColor: Colors.white,
+                          titleText: "Randevu Tarihini Seçiniz",
+                          itemStyle: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                          doneStyle: TextStyle(color: Colors.white, fontSize: 16)),onChanged: (date) {
                     print('change $date in time zone ' + date.timeZoneOffset.inHours.toString());
                   }, onConfirm: (date) {
                     print('confirm $date');
@@ -127,7 +134,13 @@ class HomePage extends StatelessWidget {
                 )),
             FlatButton(
                 onPressed: () {
-                  DatePicker.showTime12hPicker(context, showTitleActions: true, onChanged: (date) {
+                  DatePicker.showTime12hPicker(context, theme: DatePickerTheme(
+                          headerColor: Color(0XFFDF1228),
+                          backgroundColor: Colors.white,
+                          titleText: "Randevu Tarihini Seçiniz",
+                          itemStyle: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                          doneStyle: TextStyle(color: Colors.white, fontSize: 16)),showTitleActions: true, onChanged: (date) {
                     print('change $date in time zone ' + date.timeZoneOffset.inHours.toString());
                   }, onConfirm: (date) {
                     print('confirm $date');
@@ -141,7 +154,13 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   DatePicker.showDateTimePicker(context,
                       showTitleActions: true,
-                      minTime: DateTime(2020, 5, 5, 20, 50),
+                      minTime: DateTime(2020, 5, 5, 20, 50),theme: DatePickerTheme(
+                          headerColor: Color(0XFFDF1228),
+                          backgroundColor: Colors.white,
+                          titleText: "Randevu Tarihini Seçiniz",
+                          itemStyle: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                          doneStyle: TextStyle(color: Colors.white, fontSize: 16)),
                       maxTime: DateTime(2020, 6, 7, 05, 09), onChanged: (date) {
                     print('change $date in time zone ' + date.timeZoneOffset.inHours.toString());
                   }, onConfirm: (date) {
@@ -154,7 +173,13 @@ class HomePage extends StatelessWidget {
                 )),
             FlatButton(
                 onPressed: () {
-                  DatePicker.showDateTimePicker(context, showTitleActions: true, onChanged: (date) {
+                  DatePicker.showDateTimePicker(context, showTitleActions: true, theme: DatePickerTheme(
+                          headerColor: Color(0XFFDF1228),
+                          backgroundColor: Colors.white,
+                          titleText: "Randevu Tarihini Seçiniz",
+                          itemStyle: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                          doneStyle: TextStyle(color: Colors.white, fontSize: 16)),onChanged: (date) {
                     print('change $date in time zone ' + date.timeZoneOffset.inHours.toString());
                   }, onConfirm: (date) {
                     print('confirm $date');
@@ -166,7 +191,13 @@ class HomePage extends StatelessWidget {
                 )),
             FlatButton(
                 onPressed: () {
-                  DatePicker.showDateTimePicker(context, showTitleActions: true, onChanged: (date) {
+                  DatePicker.showDateTimePicker(context, showTitleActions: true, theme: DatePickerTheme(
+                          headerColor: Color(0XFFDF1228),
+                          backgroundColor: Colors.white,
+                          titleText: "Randevu Tarihini Seçiniz",
+                          itemStyle: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                          doneStyle: TextStyle(color: Colors.white, fontSize: 16)),onChanged: (date) {
                     print('change $date in time zone ' + date.timeZoneOffset.inHours.toString());
                   }, onConfirm: (date) {
                     print('confirm $date');
@@ -178,7 +209,13 @@ class HomePage extends StatelessWidget {
                 )),
             FlatButton(
                 onPressed: () {
-                  DatePicker.showDateTimePicker(context, showTitleActions: true, onChanged: (date) {
+                  DatePicker.showDateTimePicker(context, showTitleActions: true, theme: DatePickerTheme(
+                          headerColor: Color(0XFFDF1228),
+                          backgroundColor: Colors.white,
+                          titleText: "Randevu Tarihini Seçiniz",
+                          itemStyle: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                          doneStyle: TextStyle(color: Colors.white, fontSize: 16)),onChanged: (date) {
                     print('change $date in time zone ' + date.timeZoneOffset.inHours.toString());
                   }, onConfirm: (date) {
                     print('confirm $date');
@@ -190,7 +227,13 @@ class HomePage extends StatelessWidget {
                 )),
             FlatButton(
                 onPressed: () {
-                  DatePicker.showDateTimePicker(context, showTitleActions: true, onChanged: (date) {
+                  DatePicker.showDateTimePicker(context, showTitleActions: true, theme: DatePickerTheme(
+                          headerColor: Color(0XFFDF1228),
+                          backgroundColor: Colors.white,
+                          titleText: "Randevu Tarihini Seçiniz",
+                          itemStyle: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                          doneStyle: TextStyle(color: Colors.white, fontSize: 16)),onChanged: (date) {
                     print('change $date in time zone ' + date.timeZoneOffset.inHours.toString());
                   }, onConfirm: (date) {
                     print('confirm $date');
@@ -202,7 +245,13 @@ class HomePage extends StatelessWidget {
                 )),
             FlatButton(
                 onPressed: () {
-                  DatePicker.showPicker(context, showTitleActions: true, onChanged: (date) {
+                  DatePicker.showPicker(context, showTitleActions: true, theme: DatePickerTheme(
+                          headerColor: Color(0XFFDF1228),
+                          backgroundColor: Colors.white,
+                          titleText: "Randevu Tarihini Seçiniz",
+                          itemStyle: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                          doneStyle: TextStyle(color: Colors.white, fontSize: 16)),onChanged: (date) {
                     print('change $date in time zone ' + date.timeZoneOffset.inHours.toString());
                   }, onConfirm: (date) {
                     print('confirm $date');

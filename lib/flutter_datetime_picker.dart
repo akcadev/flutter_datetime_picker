@@ -247,24 +247,28 @@ class _DatePickerState extends State<_DatePickerComponent> {
   @override
   Widget build(BuildContext context) {
     DatePickerTheme theme = widget.route.theme;
-    return GestureDetector(
-      child: AnimatedBuilder(
-        animation: widget.route.animation,
-        builder: (BuildContext context, Widget child) {
-          final double bottomPadding = MediaQuery.of(context).padding.bottom;
-          return ClipRect(
-            child: CustomSingleChildLayout(
-              delegate: _BottomPickerLayout(widget.route.animation.value, theme,
-                  showTitleActions: widget.route.showTitleActions, bottomPadding: bottomPadding),
-              child: GestureDetector(
-                child: Material(
-                  color: theme.backgroundColor ?? Colors.white,
-                  child: _renderPickerView(theme),
+    return Padding(
+      padding: const EdgeInsets.only(left:10.0, right: 10.0),
+      child: GestureDetector(
+        child: AnimatedBuilder(
+          animation: widget.route.animation,
+          builder: (BuildContext context, Widget child) {
+            final double bottomPadding = MediaQuery.of(context).padding.bottom;
+            return ClipRect(
+              child: CustomSingleChildLayout(
+                delegate: _BottomPickerLayout(widget.route.animation.value, theme,
+                    showTitleActions: widget.route.showTitleActions, bottomPadding: bottomPadding),
+                child: GestureDetector(
+                  child: Material(
+                    borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                    color: theme.backgroundColor ?? Colors.white,
+                    child: _renderPickerView(theme),
+                  ),
                 ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
@@ -417,24 +421,35 @@ class _DatePickerState extends State<_DatePickerComponent> {
       height: theme.titleHeight,
       decoration: BoxDecoration(
         color: theme.headerColor ?? theme.backgroundColor ?? Colors.white,
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10))
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Container(
-            height: theme.titleHeight,
-            child: CupertinoButton(
-              pressedOpacity: 0.3,
-              padding: EdgeInsets.only(left: 16, top: 0),
-              child: Text(
-                '$cancel',
-                style: theme.cancelStyle,
+      child: Padding(
+        padding: const EdgeInsets.only(left:8.0),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+           Row(
+             children: <Widget>[
+                Icon(Icons.date_range,color: Colors.white,),
+            Container(
+              height: theme.titleHeight,
+              child: CupertinoButton(
+                pressedOpacity: 0.3,
+                padding: EdgeInsets.only(left: 10, top: 0),
+                child: Text(
+                  theme.titleText,
+                  style: TextStyle(color: Colors.white),
+                ),
+                onPressed: () => Navigator.pop(context),
               ),
-              onPressed: () => Navigator.pop(context),
             ),
-          ),
+             ],
+           ),
+
           Container(
             height: theme.titleHeight,
+            alignment: Alignment.centerRight,
             child: CupertinoButton(
               pressedOpacity: 0.3,
               padding: EdgeInsets.only(right: 16, top: 0),
@@ -450,7 +465,8 @@ class _DatePickerState extends State<_DatePickerComponent> {
               },
             ),
           ),
-        ],
+          ],
+        ),
       ),
     );
   }

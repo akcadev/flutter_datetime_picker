@@ -375,8 +375,10 @@ class TimePickerModel extends CommonPickerModel {
 
   @override
   String middleStringAtIndex(int index) {
-    if (index >= 0 && index < 60) {
-      return digits(index, 2);
+    var ind = index/15;
+    var round = (ind.round()*15)%60;
+    if (round >= 0 && round < 60) {
+      return digits(round, 2);
     } else {
       return null;
     }
