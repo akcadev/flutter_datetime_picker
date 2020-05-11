@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-class DatePickerConf extends Diagnosticable{
+class DatePickerConf with DiagnosticableMixin{
   final String titleText;
 
   const DatePickerConf({
